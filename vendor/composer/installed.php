@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '104300070c233a193f45a15e704387afc35e5524',
         'name' => 'bryanmellobarros/ecommerce',
         'dev' => true,
     ),
     'versions' => array(
         'bryanmellobarros/ecommerce' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '104300070c233a193f45a15e704387afc35e5524',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(
