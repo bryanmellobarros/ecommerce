@@ -5,6 +5,7 @@ namespace Hcode\Model;
 use \Hcode\Model;
 
 use \Hcode\DB\Sql;
+use \Hcode\DB\Sqle;
 
 class User extends Model {
 
@@ -59,6 +60,30 @@ class User extends Model {
         $_SESSION[User::SESSION] = NULL;
 
     }
+
+    public static function listAll(){
+
+        $sql = new Sqle();
+
+        return $sql->select("SELECT * FROM tb_estoque");
+
+    }
+
+    public function save(){
+
+        $sql = new Sqle();
+
+        $results = $sql->select("CALL sp_users_save(:destag, :descricao, :desnf, :deslocal)", array(
+            ":destag"=>$this->getdestag(),
+            ":descricao"=>$this->gedescricao(),
+            ":desnf"=>$this->getdesnf(),
+            ":deslocal"=>$this->getdeslocal()
+        ));
+
+        $this->setData($results[0]);
+
+    }
+
 
 }
 
